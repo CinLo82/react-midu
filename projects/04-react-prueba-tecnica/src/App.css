@@ -1,3 +1,8 @@
+body {
+    background-color: rgb(221, 169, 235);
+    color: rgb(240, 33, 136);
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -5,4 +10,19 @@ main {
     max-width: 880px;
     margin: 0 auto;
     font-family: system-ui;
+    font-size: large;
+    padding: 0 30px;
+}
+
+button {
+    background-color:coral;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+}
+
+img {
+    border: solid 5px coral;
+    border-radius: 40px;
 }
