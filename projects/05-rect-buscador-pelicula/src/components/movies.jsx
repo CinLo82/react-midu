@@ -1,20 +1,19 @@
 function ListOfMovies( { movies} ) {
     return (
-        <>
-            <ul>
+            <ul className="movies">
                 {
-                movies.map(movie => (
-                    <li key={movie.id}>
-                    <h3>{movie.title}</h3>
-                    <p>{movie.year}</p>
-                    <img src={movie.image} alt={movie.title} />
-        
-                    </li>
-        
-                ))
+                    movies.map(movie => (
+                        <li className="movie" key={movie.id}>
+                            <h3>{movie.title}</h3>
+                            <p>{movie.year}</p>
+                            <img 
+                                src={movie.image} 
+                                alt={movie.title} 
+                            />
+                        </li>
+                    ))
                 }
             </ul>
-        </>
     )
 }
 
@@ -29,7 +28,7 @@ export function Movies({ movies }) {
 
     return (
         hasMovies
-        ? <ListOfMovies movies={movies} />
-        : <NoMoviesResults />
+            ? <ListOfMovies movies={movies} />
+            : <NoMoviesResults />
     )
 }
