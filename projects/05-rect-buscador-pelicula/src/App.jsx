@@ -1,12 +1,9 @@
-import responseMovies from './mocks/with.results.json'
-import withoutResults from './mocks/with.results.json'
-import { Movies } from './components/movies'
-
-
+import { UseMovies } from './hooks/useMovies.js'
+import { Movies } from './components/Movies.jsx'
 import './App.css'
 
 function App() {
-  const movies = responseMovies.Search
+  const { movies: mappedmovies } = UseMovies()
 
   return (
     <div className='page'>
@@ -18,11 +15,12 @@ function App() {
           <button type='submid'>Buscar</button>
         </form>
       </header>
+
       <main>
-        <Movies movies={movies} />
+        <Movies movies={mappedmovies} />
       </main>
-    </div>
       
+    </div>
   )
 }
 
