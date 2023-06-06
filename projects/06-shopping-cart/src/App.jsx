@@ -1,12 +1,10 @@
+import { products } from './mocks/products.json'
+import { Products } from './components/Products'
 import './App.css'
 
 function App() {
-
-
   return (
-    <>
-      <h1>shopping cart</h1>
-    </>
+      <Products products={products}/>
   )
 }
 
