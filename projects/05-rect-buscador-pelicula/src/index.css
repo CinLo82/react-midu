@@ -125,7 +125,7 @@ body {
 @media (prefers-color-scheme: dark) {
 
   body {
-  background: #202b38;
+  background: #203829;
   background: var(--background-body);
   }
 }

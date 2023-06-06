@@ -1,44 +1,98 @@
 .page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 800px;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+form {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.movies {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  width: 100%;
+  gap: 32px;
+}
+
+.movie {
+  text-align: center;
+  list-style: none;
+}
+
+.movie h3,
+.movie p {
+  margin: 0;
+}
+
+.movie img {
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+/* Colores personalizados */
+:root {
+  --primary-color: #2a9d8f;
+  --secondary-color: #e9c46a;
+  --error-color: #bf3817;
+}
+
+.page {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+form {
+  background-color: var(--secondary-color);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+input[type="text"] {
+  border: none;
+  background-color: black;
+  padding: 8px;
+  border-radius: 4px;
+  width: 300px;
+  margin-right: 8px;
+}
+
+input[type="checkbox"] {
+  margin-left: 8px;
+}
+
+button {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d4b06a;
+}
+
+p {
+  color: var(--error-color);
+}
+
   
-  main {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  form {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .movies {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    width: 100%;
-    gap: 32px;
-  }
-  
-  .movie {
-    text-align: center;
-    list-style: none;
-  }
-  
-  .movie h3, .movie p {
-    margin: 0;
-  }
-  
-  .movie img {
-    border-radius: 8px;
-    margin-top: 16px;
-  }
