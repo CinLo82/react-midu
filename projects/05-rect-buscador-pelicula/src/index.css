@@ -30,7 +30,8 @@
 
 @media (prefers-color-scheme: dark) {
 :root {
-  --background-body: #202b38;
+  --background-body: #2a9d8f;
+  --background-html: #202b38;
   --background: #161f27;
   --background-alt: #1a242f;
   --selection: #1c76c5;
@@ -58,6 +59,8 @@ html {
   scrollbar-color: rgb(170, 170, 170) #fff;
   scrollbar-color: var(--scrollbar-thumb) var(--background-body);
   scrollbar-width: thin;
+  background: var(--background-html);
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -113,7 +116,7 @@ body {
   line-height: 1.4;
   max-width: 800px;
   margin: 20px auto;
-  padding: 0 10px;
+  padding: 20px 10px;
   word-wrap: break-word;
   color: #363636;
   color: var(--text-main);

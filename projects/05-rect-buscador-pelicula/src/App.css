@@ -1,3 +1,18 @@
+:root {
+  --primary-color: #2a9d8f;
+  --secondary-color: #e9c46a;
+  --error-color: #bf3817;
+} 
+
+html {
+  
+  margin: 20px;
+}
+
+body {
+  background-color: var(--primary-color);
+}
+
 .page {
   display: flex;
   flex-direction: column;
@@ -5,8 +20,8 @@
   align-items: center;
   width: 100%;
   max-width: 800px;
-  padding: 20px;
   font-family: Arial, sans-serif;
+  color: white;
 }
 
 main {
@@ -20,6 +35,9 @@ form {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  background-color: var(--secondary-color);
+  padding: 12px;
+  border-radius: 8px;
 }
 
 .movies {
@@ -45,24 +63,6 @@ form {
 .movie img {
   border-radius: 8px;
   margin-top: 16px;
-}
-
-/* Colores personalizados */
-:root {
-  --primary-color: #2a9d8f;
-  --secondary-color: #e9c46a;
-  --error-color: #bf3817;
-}
-
-.page {
-  background-color: var(--primary-color);
-  color: white;
-}
-
-form {
-  background-color: var(--secondary-color);
-  padding: 12px;
-  border-radius: 8px;
 }
 
 input[type="text"] {
@@ -94,5 +94,8 @@ button:hover {
 p {
   color: var(--error-color);
 }
+
+
+
 
   
