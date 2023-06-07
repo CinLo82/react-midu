@@ -4,39 +4,19 @@ import { useState } from 'react'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { IS_DEVELOPMENT } from '../config'
-
-function useFilters () {
-  const [filters, setFilters] = useState({
-    category: 'all',
-    minPrice: 0
-  })
-
-  const filterProducts = (products) => {
-    return products.filter(product => {
-      return (
-        product.price >= filters.minPrice &&
-        (
-          filters.category === 'all' ||
-          product.category === filters.category
-        )
-      )
-    })
-  }
-
-  return { filters, filterProducts, setFilters }
-}
+import { useFilters } from './hooks/useFilters'
 
 function App() {
   const [products] = useState(initialproducts)
-  const { filters, filterProducts, setFilters } = useFilters()
+  const { filterProducts } = useFilters()
 
   const filteredProducts = filterProducts(products)
 
   return (
     <>
-      <Header changeFilters={setFilters}/>
+      <Header />
       <Products products={filteredProducts}/>
-      {IS_DEVELOPMENT &&<Footer filters={filters}/>}
+      {IS_DEVELOPMENT &&<Footer />}
     </>
   )
 }
