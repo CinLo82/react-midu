@@ -26,7 +26,7 @@ export function Filters () {
     return (
         <section className="filters">
             <div>
-                <label htmlFor="price">Precio a partir de:</label>
+                <label htmlFor={minPriceFilterId}>Precio a partir de:</label>
                 <input 
                     type="range"
                     id={minPriceFilterId} 
