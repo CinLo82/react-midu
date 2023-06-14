@@ -1,17 +1,8 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import { EVENTS } from './const '
+import { EVENTS } from './consts '
 import HomePage from './pages/Home'
 import AboutPage from './pages/About'
-
-
-export function navigate (href) {
-  window.history.pushState({}, '', href)
-  const navigationEvent = new Event(EVENTS.PUSHSTATE)
-  window.dispatchEvent(navigationEvent)
-}
-
-
 
 function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname)
