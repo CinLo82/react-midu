@@ -1,10 +1,12 @@
 import './App.css'
+import { Suspense, lazy } from 'react'
 import HomePage from './pages/Home'
-import AboutPage from './pages/About'
 import Page404 from './pages/Page404'
-import { Router } from './Router'
 import SearchPage from './pages/Search'
+import { Router } from './Router'
 import { Route } from './Route'
+
+const LazyAboutPage = lazy(() => import('./pages/About'))
 
 const appRoutes = [
   {
@@ -17,10 +19,12 @@ function App() {
 
   return (
     <main>
-      <Router routes={appRoutes} defaultComponent={Page404}>
-        <Route path='/' Component={HomePage} />
-        <Route path='/about' Component={AboutPage} />
-      </Router>
+      <Suspense fallback={null}>
+        <Router routes={appRoutes} defaultComponent={Page404}>
+          <Route path='/' Component={HomePage} />
+          <Route path='/about' Component={LazyAboutPage} />
+        </Router>
+      </Suspense>
       
     </main>
   )
